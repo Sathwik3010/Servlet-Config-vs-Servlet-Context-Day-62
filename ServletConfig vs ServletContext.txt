@@ -1,0 +1,22 @@
+what are the differences between ServletConfig and ServletContext
+=================================================================
+1. ServletConfig is an Object it is applicable to particular ServletOnly.
+ServletContext is an Object it is applicable to entire web application.
+
+2. Servlet config is an Object that is able to provide all the configuration details of a parictualr servlet
+ServletContext is an Object that is able to provide all the configuration details of a whole web application
+
+3. in web applications ServletConfig object will be created by the container immediately after the servlet instantiation and just before accessing init() method in servlet initialization.
+ServletContext Object will be created by container when we start the server and when we deploy the application.
+
+4. in web application ServletConfig object will be destroyed b the container just before performing Servlet De-Instantiation.
+in web application ServletContext object will be destroyed by the container when we stop the server and undeploy the web application.
+
+5. in web applications the ServletConfig Object lifetime is almost all the same as the servlet Object lifecycle.
+in Web applications the ServletContext Object lifetime is almost all the same to the web application lifecycle.
+
+6. due to the above reasons the scope of the ServletConfig is upto the particular Servlet.
+Due to the above reasons the scope of ServletContext is upto the particular web application.
+
+7. due to the above reasons servletConfig object has less shareability.
+I due to the above reasons ServletContext object has more shareability.
